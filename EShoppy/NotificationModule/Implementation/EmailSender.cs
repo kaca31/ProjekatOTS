@@ -16,7 +16,7 @@ namespace EShoppy.NotificationModule.Implementation
             //null treba proveriti
             using (MailMessage mail = new MailMessage())
             {
-                mail.From = new MailAddress("katarina.mitrovic98@gmail.com");
+                mail.From = new MailAddress("katarina.mitrovic1998@gmail.com");
                 mail.To.Add(email);
                 mail.Subject = subject;
                 mail.Body = text;
@@ -24,7 +24,7 @@ namespace EShoppy.NotificationModule.Implementation
 
                 using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
                 {
-                    smtp.Credentials = new NetworkCredential("katarina.mitrovic98@gmail.com", "katarina60");
+                    smtp.Credentials = new NetworkCredential("katarina.mitrovic1998@gmail.com", "katarina60");
                     smtp.EnableSsl = true;
                     smtp.Send(mail);
                 }
